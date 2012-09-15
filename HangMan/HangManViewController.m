@@ -154,11 +154,7 @@
     [self.image setImage:[UIImage imageNamed:imageName]]; 
 }
 
-- (void)viewDidUnload {
-    [self setWord:nil];
-    [self setImage:nil];
-    [self setWord:nil];
-    [self setWord:nil];
-    [super viewDidUnload];
+-(void)viewDidAppear:(BOOL)animated {
+    [self newGame];
 }
 @end
