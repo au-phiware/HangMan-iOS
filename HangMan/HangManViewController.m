@@ -65,8 +65,7 @@
     for (NSInteger i = 1; i <= 26; i++) {
         [[[self view] viewWithTag:i] setHidden:NO];
     }
-    NSString* imageName = [NSString stringWithFormat:@"hangman0.jpg"];
-    [self.image setImage:[UIImage imageNamed:imageName]]; 
+    [self.image setImage:[UIImage imageNamed:@"hangman0"]];
     
     NSString *test_word = [[self mind] getRandomWord];
     NSLog(@"%@", test_word);
@@ -151,7 +150,7 @@
 
 - (void) imageFailue
 {
-    NSString* imageName = [NSString stringWithFormat:@"hangman%d.jpg", self.faults];
+    NSString* imageName = [NSString stringWithFormat:@"hangman%d", self.faults];
     [self.image setImage:[UIImage imageNamed:imageName]]; 
 }
 
