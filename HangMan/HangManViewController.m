@@ -62,15 +62,18 @@
 
     self.doneChars = [[NSMutableArray alloc] init];
     [self.doneChars removeAllObjects];
-    NSMutableString* s = [NSMutableString stringWithFormat:@""];
+    for (NSInteger i = 1; i <= 26; i++) {
+        [[[self view] viewWithTag:i] setHidden:NO];
+    }
     NSString* imageName = [NSString stringWithFormat:@"hangman0.jpg"];
     [self.image setImage:[UIImage imageNamed:imageName]]; 
     
     NSString *test_word = [[self mind] getRandomWord];
     NSLog(@"%@", test_word);
+    NSMutableString* s = [NSMutableString stringWithFormat:@"_"];
     NSInteger length = [test_word length];
-    for (NSInteger i = 0; i < length; i++) {
-        [s appendFormat:@"_ "];        
+    for (NSInteger i = 1; i < length; i++) {
+        [s appendFormat:@" _"];        
     }
     [self.word setText:s];    
 }
@@ -88,33 +91,24 @@
     }
             
     [self.doneChars addObject:character];
+    [sender setHidden:YES];
     NSMutableArray *retval = [self.mind getPositionsOfWord:character];
     NSLog(@"%d", [retval count]);
-    NSString* label = [self.word text];
     
     if ([retval count] == 0) {
         self.faults += 1;
         [self imageFailue];
         if(self.faults == 7){
             NSLog(@"LOST");
-            NSString* message = [NSString stringWithFormat:@"You Lost!"];
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Sorry!!" 
-                                                            message:message 
-                                                           delegate:self
-                                                  cancelButtonTitle:@"New Game"
-                                                  otherButtonTitles:nil];
-            [alert show];
+            [self revealWord];
+            for (NSInteger i = 1; i <= 26; i++) {
+                [[[self view] viewWithTag:i] setHidden:YES];
+            }
         }
         
     }
     else {
-        for (NSUInteger i = 0; i < [retval count]; i++) {
-            NSNumber *index = [retval objectAtIndex:i];
-            NSRange range = NSMakeRange(2*([index intValue]+1) - 2, 1);
-            label = [label stringByReplacingCharactersInRange:range withString:character];
-        }
-        self.solved += [retval count];
-        [self.word setText:label];
+        [self revealPositionsOfWord:retval];
         if (self.solved == [[[self mind] word] length]) {
             NSLog(@"SOLVED!");
             NSString* message = [NSString stringWithFormat:@"Congratulations"];
@@ -130,6 +124,26 @@
 
 }
 
+- (void)revealPositionsOfWord:(NSArray *)positions {
+    NSString* label = [self.word text];
+    for (NSUInteger i = 0; i < [positions count]; i++) {
+        NSNumber *index = [positions objectAtIndex:i];
+        NSRange range = NSMakeRange(2*[index intValue], 1);
+        NSString *character = [self.mind.word substringWithRange:NSMakeRange([index intValue], 1)];
+        label = [label stringByReplacingCharactersInRange:range withString:character];
+    }
+    self.solved += [positions count];
+    [self.word setText:label];
+}
+- (void)revealWord {
+    NSString *word = self.mind.word;
+    self.solved = [word length];
+    NSMutableString* s = [NSMutableString stringWithString:word];
+    for (NSInteger i = self.solved - 1; i > 0; i--) {
+        [s insertString:@" " atIndex:i];
+    }
+    [self.word setText:s];
+}
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     [self newGame];
