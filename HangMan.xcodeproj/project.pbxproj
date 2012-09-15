@@ -25,6 +25,8 @@
 		53E62B241604441B0008143C /* hangman7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 53E62B141604441B0008143C /* hangman7@2x.png */; };
 		53E62B28160447070008143C /* redo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 53E62B26160447070008143C /* redo@2x.png */; };
 		53E62B29160447070008143C /* redo.png in Resources */ = {isa = PBXBuildFile; fileRef = 53E62B27160447070008143C /* redo.png */; };
+		53E62B2C16044EA00008143C /* winner@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 53E62B2A16044E9F0008143C /* winner@2x.png */; };
+		53E62B2D16044EA00008143C /* winner.png in Resources */ = {isa = PBXBuildFile; fileRef = 53E62B2B16044EA00008143C /* winner.png */; };
 		CB6B7B15157D339300509839 /* HangManMind.m in Sources */ = {isa = PBXBuildFile; fileRef = CB6B7B14157D339300509839 /* HangManMind.m */; };
 		CB6B7B1D157D4A3B00509839 /* wordlist.json in Resources */ = {isa = PBXBuildFile; fileRef = CB6B7B1C157D4A3B00509839 /* wordlist.json */; };
 		CBB0D488157CBC9A009C5C86 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB0D487157CBC9A009C5C86 /* UIKit.framework */; };
@@ -56,6 +58,8 @@
 		53E62B141604441B0008143C /* hangman7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hangman7@2x.png"; sourceTree = "<group>"; };
 		53E62B26160447070008143C /* redo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "redo@2x.png"; sourceTree = "<group>"; };
 		53E62B27160447070008143C /* redo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redo.png; sourceTree = "<group>"; };
+		53E62B2A16044E9F0008143C /* winner@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "winner@2x.png"; sourceTree = "<group>"; };
+		53E62B2B16044EA00008143C /* winner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = winner.png; sourceTree = "<group>"; };
 		CB6B7B13157D339300509839 /* HangManMind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HangManMind.h; sourceTree = "<group>"; };
 		CB6B7B14157D339300509839 /* HangManMind.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HangManMind.m; sourceTree = "<group>"; };
 		CB6B7B1C157D4A3B00509839 /* wordlist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = wordlist.json; sourceTree = "<group>"; };
@@ -91,6 +95,8 @@
 		CB6B7AF4157D314700509839 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				53E62B2A16044E9F0008143C /* winner@2x.png */,
+				53E62B2B16044EA00008143C /* winner.png */,
 				53E62B26160447070008143C /* redo@2x.png */,
 				53E62B27160447070008143C /* redo.png */,
 				53E62B051604441A0008143C /* hangman0.png */,
@@ -240,6 +246,8 @@
 				53E62B241604441B0008143C /* hangman7@2x.png in Resources */,
 				53E62B28160447070008143C /* redo@2x.png in Resources */,
 				53E62B29160447070008143C /* redo.png in Resources */,
+				53E62B2C16044EA00008143C /* winner@2x.png in Resources */,
+				53E62B2D16044EA00008143C /* winner.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

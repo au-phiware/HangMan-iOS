@@ -11,5 +11,6 @@
 
 @interface HangManViewController : UIViewController
 @property (nonatomic, strong) HangManMind* mind;
+@property (strong, nonatomic) IBOutlet UIImageView *winner;
 
 @end

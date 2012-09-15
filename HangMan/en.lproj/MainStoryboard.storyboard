@@ -459,11 +459,16 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="300"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" image="winner" id="Y9P-hw-6r8" userLabel="Image View - winner">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="300"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="image" destination="rrs-4K-Hm3" id="CW0-c0-wYQ"/>
+                        <outlet property="winner" destination="Y9P-hw-6r8" id="5PV-p8-c6X"/>
                         <outlet property="word" destination="3KO-pJ-JmC" id="8WK-b6-GBp"/>
                     </connections>
                 </viewController>
@@ -474,12 +479,14 @@
     <resources>
         <image name="hangman0" width="16" height="16"/>
         <image name="redo" width="16" height="16"/>
+        <image name="winner" width="16" height="16"/>
     </resources>
     <classes>
         <class className="HangManViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/HangManViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="image" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="winner" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="word" candidateClass="UILabel"/>
             </relationships>
         </class>

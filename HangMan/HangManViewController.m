@@ -18,6 +18,7 @@
 
 @implementation HangManViewController
 @synthesize mind = _mind;
+@synthesize winner = _winner;
 @synthesize faults = _faults;
 @synthesize word = _word;
 @synthesize solved = _solved;
@@ -62,10 +63,9 @@
 
     self.doneChars = [[NSMutableArray alloc] init];
     [self.doneChars removeAllObjects];
-    for (NSInteger i = 1; i <= 26; i++) {
-        [[[self view] viewWithTag:i] setHidden:NO];
-    }
+    [self showKeys];
     [self.image setImage:[UIImage imageNamed:@"hangman0"]];
+    [self.winner setHidden:YES];
     
     NSString *test_word = [[self mind] getRandomWord];
     NSLog(@"%@", test_word);
@@ -81,8 +81,7 @@
     [self presentInfo];
 }
 
-- (IBAction)characterPressed:(UIButton *)sender 
-{
+- (IBAction)characterPressed:(UIButton *)sender {
     NSString *character = [sender currentTitle];   
     
     if([self.doneChars containsObject:character]){
@@ -100,9 +99,7 @@
         if(self.faults == 7){
             NSLog(@"LOST");
             [self revealWord];
-            for (NSInteger i = 1; i <= 26; i++) {
-                [[[self view] viewWithTag:i] setHidden:YES];
-            }
+            [self hideKeys];
         }
         
     }
@@ -110,14 +107,8 @@
         [self revealPositionsOfWord:retval];
         if (self.solved == [[[self mind] word] length]) {
             NSLog(@"SOLVED!");
-            NSString* message = [NSString stringWithFormat:@"Congratulations"];
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Winner!!" 
-                                                            message:message 
-                                                           delegate:self
-                                                  cancelButtonTitle:@"New Game"
-                                                  otherButtonTitles:nil];
-            [alert show];
-
+            [self.winner setHidden:NO];
+            [self hideKeys];
         }
     }
 
@@ -143,18 +134,27 @@
     }
     [self.word setText:s];
 }
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    [self newGame];
+- (void)hideKeys {
+    for (NSInteger i = 1; i <= 26; i++) {
+        [[[self view] viewWithTag:i] setHidden:YES];
+    }
+}
+- (void)showKeys {
+    for (NSInteger i = 1; i <= 26; i++) {
+        [[[self view] viewWithTag:i] setHidden:NO];
+    }
 }
 
-- (void) imageFailue
-{
+- (void) imageFailue {
     NSString* imageName = [NSString stringWithFormat:@"hangman%d", self.faults];
     [self.image setImage:[UIImage imageNamed:imageName]]; 
 }
 
 -(void)viewDidAppear:(BOOL)animated {
     [self newGame];
+}
+- (void)viewDidUnload {
+    [self setWinner:nil];
+    [super viewDidUnload];
 }
 @end
