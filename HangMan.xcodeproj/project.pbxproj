@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		53165E031604742E00148489 /* MainStoryboard-iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53165E021604742E00148489 /* MainStoryboard-iPad.storyboard */; };
+		53165E0E16047DFD00148489 /* hangman7@2x@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 53165E0416047DFD00148489 /* hangman7@2x@2x.png */; };
+		53165E0F16047DFD00148489 /* hangman6@2x@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 53165E0516047DFD00148489 /* hangman6@2x@2x.png */; };
+		53165E1016047DFD00148489 /* hangman5@2x@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 53165E0616047DFD00148489 /* hangman5@2x@2x.png */; };
+		53165E1116047DFD00148489 /* hangman0@2x@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 53165E0716047DFD00148489 /* hangman0@2x@2x.png */; };
+		53165E1216047DFD00148489 /* hangman4@2x@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 53165E0816047DFD00148489 /* hangman4@2x@2x.png */; };
+		53165E1316047DFD00148489 /* hangman3@2x@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 53165E0916047DFD00148489 /* hangman3@2x@2x.png */; };
+		53165E1416047DFD00148489 /* hangman2@2x@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 53165E0A16047DFD00148489 /* hangman2@2x@2x.png */; };
+		53165E1516047DFD00148489 /* hangman1@2x@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 53165E0B16047DFD00148489 /* hangman1@2x@2x.png */; };
+		53165E1616047DFD00148489 /* winner@2x@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 53165E0C16047DFD00148489 /* winner@2x@2x.png */; };
+		53165E1716047DFD00148489 /* redo@2x@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 53165E0D16047DFD00148489 /* redo@2x@2x.png */; };
 		53E62B151604441B0008143C /* hangman0.png in Resources */ = {isa = PBXBuildFile; fileRef = 53E62B051604441A0008143C /* hangman0.png */; };
 		53E62B161604441B0008143C /* hangman0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 53E62B061604441A0008143C /* hangman0@2x.png */; };
 		53E62B171604441B0008143C /* hangman1.png in Resources */ = {isa = PBXBuildFile; fileRef = 53E62B071604441A0008143C /* hangman1.png */; };
@@ -50,6 +61,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		53165E021604742E00148489 /* MainStoryboard-iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "MainStoryboard-iPad.storyboard"; sourceTree = "<group>"; };
+		53165E0416047DFD00148489 /* hangman7@2x@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hangman7@2x@2x.png"; sourceTree = "<group>"; };
+		53165E0516047DFD00148489 /* hangman6@2x@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hangman6@2x@2x.png"; sourceTree = "<group>"; };
+		53165E0616047DFD00148489 /* hangman5@2x@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hangman5@2x@2x.png"; sourceTree = "<group>"; };
+		53165E0716047DFD00148489 /* hangman0@2x@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hangman0@2x@2x.png"; sourceTree = "<group>"; };
+		53165E0816047DFD00148489 /* hangman4@2x@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hangman4@2x@2x.png"; sourceTree = "<group>"; };
+		53165E0916047DFD00148489 /* hangman3@2x@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hangman3@2x@2x.png"; sourceTree = "<group>"; };
+		53165E0A16047DFD00148489 /* hangman2@2x@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hangman2@2x@2x.png"; sourceTree = "<group>"; };
+		53165E0B16047DFD00148489 /* hangman1@2x@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hangman1@2x@2x.png"; sourceTree = "<group>"; };
+		53165E0C16047DFD00148489 /* winner@2x@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "winner@2x@2x.png"; sourceTree = "<group>"; };
+		53165E0D16047DFD00148489 /* redo@2x@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "redo@2x@2x.png"; sourceTree = "<group>"; };
 		53E62B051604441A0008143C /* hangman0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hangman0.png; sourceTree = "<group>"; };
 		53E62B061604441A0008143C /* hangman0@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hangman0@2x.png"; sourceTree = "<group>"; };
 		53E62B071604441A0008143C /* hangman1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hangman1.png; sourceTree = "<group>"; };
@@ -115,6 +137,16 @@
 		CB6B7AF4157D314700509839 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				53165E0416047DFD00148489 /* hangman7@2x@2x.png */,
+				53165E0516047DFD00148489 /* hangman6@2x@2x.png */,
+				53165E0616047DFD00148489 /* hangman5@2x@2x.png */,
+				53165E0716047DFD00148489 /* hangman0@2x@2x.png */,
+				53165E0816047DFD00148489 /* hangman4@2x@2x.png */,
+				53165E0916047DFD00148489 /* hangman3@2x@2x.png */,
+				53165E0A16047DFD00148489 /* hangman2@2x@2x.png */,
+				53165E0B16047DFD00148489 /* hangman1@2x@2x.png */,
+				53165E0C16047DFD00148489 /* winner@2x@2x.png */,
+				53165E0D16047DFD00148489 /* redo@2x@2x.png */,
 				53E62B32160463360008143C /* Icon-Small-50@2x.png */,
 				53E62B33160463360008143C /* Icon-Small@2x.png */,
 				53E62B34160463360008143C /* Icon-Small.png */,
@@ -184,6 +216,7 @@
 				CBB0D496157CBC9A009C5C86 /* HangManAppDelegate.h */,
 				CBB0D497157CBC9A009C5C86 /* HangManAppDelegate.m */,
 				CBB0D499157CBC9A009C5C86 /* MainStoryboard.storyboard */,
+				53165E021604742E00148489 /* MainStoryboard-iPad.storyboard */,
 				CBB0D49C157CBC9A009C5C86 /* HangManViewController.h */,
 				CBB0D49D157CBC9A009C5C86 /* HangManViewController.m */,
 				CBB0D48E157CBC9A009C5C86 /* Supporting Files */,
@@ -288,6 +321,17 @@
 				53E62B3F160463370008143C /* Icon-72.png in Resources */,
 				53E62B40160463370008143C /* Icon@2x.png in Resources */,
 				53E62B41160463370008143C /* Icon-72@2x.png in Resources */,
+				53165E031604742E00148489 /* MainStoryboard-iPad.storyboard in Resources */,
+				53165E0E16047DFD00148489 /* hangman7@2x@2x.png in Resources */,
+				53165E0F16047DFD00148489 /* hangman6@2x@2x.png in Resources */,
+				53165E1016047DFD00148489 /* hangman5@2x@2x.png in Resources */,
+				53165E1116047DFD00148489 /* hangman0@2x@2x.png in Resources */,
+				53165E1216047DFD00148489 /* hangman4@2x@2x.png in Resources */,
+				53165E1316047DFD00148489 /* hangman3@2x@2x.png in Resources */,
+				53165E1416047DFD00148489 /* hangman2@2x@2x.png in Resources */,
+				53165E1516047DFD00148489 /* hangman1@2x@2x.png in Resources */,
+				53165E1616047DFD00148489 /* winner@2x@2x.png in Resources */,
+				53165E1716047DFD00148489 /* redo@2x@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,7 +422,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HangMan/HangMan-Prefix.pch";
 				INFOPLIST_FILE = "HangMan/HangMan-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -389,7 +435,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HangMan/HangMan-Prefix.pch";
 				INFOPLIST_FILE = "HangMan/HangMan-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

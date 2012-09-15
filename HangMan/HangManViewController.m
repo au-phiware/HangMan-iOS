@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *image;
 @property (strong, nonatomic) NSMutableArray *doneChars;
 @property (nonatomic) NSInteger solved;
+@property (nonatomic) NSString *imageFormat;
 @end
 
 @implementation HangManViewController
@@ -23,6 +24,7 @@
 @synthesize word = _word;
 @synthesize solved = _solved;
 @synthesize image = _image;
+@synthesize imageFormat;
 @synthesize doneChars = _doneChars;
 
 - (HangManMind*) mind
@@ -64,7 +66,7 @@
     self.doneChars = [[NSMutableArray alloc] init];
     [self.doneChars removeAllObjects];
     [self showKeys];
-    [self.image setImage:[UIImage imageNamed:@"hangman0"]];
+    [self.image setImage:[UIImage imageNamed:[NSString stringWithFormat:self.imageFormat, 0]]];
     [self.winner setHidden:YES];
     
     NSString *test_word = [[self mind] getRandomWord];
@@ -146,11 +148,16 @@
 }
 
 - (void) imageFailue {
-    NSString* imageName = [NSString stringWithFormat:@"hangman%d", self.faults];
+    NSString* imageName = [NSString stringWithFormat:self.imageFormat, self.faults];
     [self.image setImage:[UIImage imageNamed:imageName]]; 
 }
 
 -(void)viewDidAppear:(BOOL)animated {
+    if (self.view.bounds.size.width > 640) {
+        self.imageFormat = @"hangman%d@2x";
+    } else {
+        self.imageFormat = @"hangman%d";
+    }
     [self newGame];
 }
 - (void)viewDidUnload {
